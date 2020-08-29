@@ -2,8 +2,7 @@ var cp = require('child_process');
 var fs = require('fs');
 var path = require('path');
 var helper = cp.spawn('node', ['helper.js']);
-fs.unlink(path.join(require('os').homedir(), '.helperdata.txt'), function(err) {});
-if(confirm('Would you like to improve HELPER by sending data to the developers?')) {
+if (confirm('Would you like to improve HELPER by sending data to the developers?')) {
   alert('Thanks for improving HELPER!');
   var sendData = true;
 }

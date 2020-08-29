@@ -1,0 +1,13 @@
+{
+  "name": "@thecoder08/helper",
+  "description": "A HELPful AI.",
+  "main": "index.html",
+  "version": "1.0.1",
+  "window": {
+    "height": 500,
+    "width": 800
+  },
+  "dependencies": {
+    "@thecoder08/docuget": "^1.0.3"
+  }
+}

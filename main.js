@@ -25,3 +25,6 @@ helper.stdout.on('data', function(data) {
   }
   $('#answer').value = data.toString();
 });
+helper.on('exit', function() {
+  process.exit();
+});

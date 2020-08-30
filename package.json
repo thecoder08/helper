@@ -8,6 +8,8 @@
     "width": 800
   },
   "dependencies": {
-    "@thecoder08/docuget": "^1.0.3"
+    "@thecoder08/docuget": "^1.0.3",
+    "open": "^7.2.1",
+    "world-clock": "^1.4.0"
   }
 }

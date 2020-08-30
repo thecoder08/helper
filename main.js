@@ -13,7 +13,7 @@ else {
 $('#phrase').onkeypress = function(key) {
   if (key.code == 'Enter') {
     if (sendData) {
-      fs.appendFileSync(path.join(require('os').homedir(), '.helperdata.txt'), $('#phrase').value + require('os').EOL);
+      fs.appendFileSync(path.join(require('os').homedir(), '.helperdata.txt'), 'User: ' + $('#phrase').value + require('os').EOL);
     }
     helper.stdin.write($('#phrase').value + '\n');
     $('#phrase').value = '';
@@ -21,7 +21,7 @@ $('#phrase').onkeypress = function(key) {
 }
 helper.stdout.on('data', function(data) {
   if (sendData) {
-    fs.appendFileSync(path.join(require('os').homedir(), '.helperdata.txt'), data.toString());
+    fs.appendFileSync(path.join(require('os').homedir(), '.helperdata.txt'), 'HELPER: ' + data.toString());
   }
   $('#answer').value = data.toString();
 });

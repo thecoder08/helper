@@ -28,7 +28,7 @@ $('#phrase').onkeypress = function(key) {
     if (sendData) {
       fs.appendFileSync(path.join(require('os').homedir(), '.helperdata.txt'), 'User: ' + $('#phrase').value + require('os').EOL);
     }
-    helper.stdin.write($('#phrase').value + require('os').EOF);
+    helper.stdin.write($('#phrase').value + require('os').EOL);
     $('#phrase').value = '';
   }
 }

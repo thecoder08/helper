@@ -1,7 +1,7 @@
 # HELPER
 HELPER is a HELPful AI.
 # Download
-Please note that amd64/x86_64 computers are required for all downloads.
+Please note that amd64/x86_64 computers are required for all downloads. Also, [node.js](https://nodejs.org) must be installed to run the app.
 ## Debian-based Linux
 [Download](https://github.com/thecoder08/helper/releases/download/v1.0.2/helper_1.0.2_debian.deb)  
 Just install the package, and run the command `helper` to or click HELPER in the app list to start. Easy peasy.

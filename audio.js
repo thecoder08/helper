@@ -3,7 +3,6 @@
 // Imports the Google Cloud client library
 const textToSpeech = require('@google-cloud/text-to-speech');
 var args = process.argv;
-console.log(args[2]);
 // Import other required libraries
 const fs = require('fs');
 const util = require('util');

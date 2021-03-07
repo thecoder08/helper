@@ -4,9 +4,8 @@ var path = require('path');
 var helper = cp.exec('node helper.js');
 function textToSpeech(text, callback) {
   var audioinstance = cp.exec('node audio.js "' + text + '"');
-  console.log('node audio.js "' + text + '"');
   audioinstance.stderr.on('data', function(data) {
-    console.err(data);
+    console.error(data);
   });
   audioinstance.stdout.on('data', function(data) {
     console.log(data);
@@ -38,7 +37,6 @@ helper.stdout.on('data', function(data) {
   }
   $('#answer').value = data.toString();
   textToSpeech(data.toString(), function() {
-    console.log('callback!');
     var audio = new Audio('output.mp3?foo=' + new Date().getTime());
     audio.addEventListener("canplaythrough", function() {
       audio.play();

@@ -3,7 +3,9 @@ var fs = require('fs');
 var path = require('path');
 var helper = cp.exec('node helper.js');
 function textToSpeech(text, callback) {
-  var audioinstance = cp.exec('node audio.js "' + text + '"');
+  var env = process.env;
+  env.GOOGLE_APPLICATION_CREDENTIALS = $('#gac').value;
+  var audioinstance = cp.exec('node audio.js "' + text + '"', {env: env});
   audioinstance.stderr.on('data', function(data) {
     console.error(data);
   });

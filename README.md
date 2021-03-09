@@ -14,3 +14,5 @@ If you aren't Debian-based or don't prefer package managers, then use this downl
 ## Windows
 [Download](https://github.com/thecoder08/helper/releases/download/v1.0.2/helper_1.0.2_win.zip)  
 Unfortunately, there's no installer for Windows. Unzip, and run the file `helper.exe`.
+## Speech
+The speech is powered by Google Cloud. To enable it, create a project on Google Cloud console, Enable the Google Text to Speech API, create a service account with role Project > Owner, and download it's credentials as JSON. Then, specify the path to the JSON file in the app, and voila! It should be talking!
